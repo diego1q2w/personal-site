@@ -6,7 +6,7 @@ resource "aws_s3_bucket_object" "file_0" {
   key          = "/assets/css/color.css"
   source       = "../site/assets/css/color.css"
   content_type = lookup(var.mime_types, "css")
-  etag         = filebase64sha256("../site/assets/css/color.css")
+  etag         = filemd5("../site/assets/css/color.css")
 }
 
 resource "aws_s3_bucket_object" "file_1" {
@@ -14,7 +14,7 @@ resource "aws_s3_bucket_object" "file_1" {
   key          = "/assets/css/main.css"
   source       = "../site/assets/css/main.css"
   content_type = lookup(var.mime_types, "css")
-  etag         = filebase64sha256("../site/assets/css/main.css")
+  etag         = filemd5("../site/assets/css/main.css")
 }
 
 resource "aws_s3_bucket_object" "file_2" {
@@ -22,7 +22,7 @@ resource "aws_s3_bucket_object" "file_2" {
   key          = "/assets/css/monochrome.css"
   source       = "../site/assets/css/monochrome.css"
   content_type = lookup(var.mime_types, "css")
-  etag         = filebase64sha256("../site/assets/css/monochrome.css")
+  etag         = filemd5("../site/assets/css/monochrome.css")
 }
 
 resource "aws_s3_bucket_object" "file_3" {
@@ -30,7 +30,7 @@ resource "aws_s3_bucket_object" "file_3" {
   key          = "/assets/fonts/FontAwesome.otf"
   source       = "../site/assets/fonts/FontAwesome.otf"
   content_type = lookup(var.mime_types, "otf")
-  etag         = filebase64sha256("../site/assets/fonts/FontAwesome.otf")
+  etag         = filemd5("../site/assets/fonts/FontAwesome.otf")
 }
 
 resource "aws_s3_bucket_object" "file_4" {
@@ -38,7 +38,7 @@ resource "aws_s3_bucket_object" "file_4" {
   key          = "/assets/fonts/fontawesome-webfont.eot"
   source       = "../site/assets/fonts/fontawesome-webfont.eot"
   content_type = lookup(var.mime_types, "eot")
-  etag         = filebase64sha256("../site/assets/fonts/fontawesome-webfont.eot")
+  etag         = filemd5("../site/assets/fonts/fontawesome-webfont.eot")
 }
 
 resource "aws_s3_bucket_object" "file_5" {
@@ -46,7 +46,7 @@ resource "aws_s3_bucket_object" "file_5" {
   key          = "/assets/fonts/fontawesome-webfont.svg"
   source       = "../site/assets/fonts/fontawesome-webfont.svg"
   content_type = lookup(var.mime_types, "svg")
-  etag         = filebase64sha256("../site/assets/fonts/fontawesome-webfont.svg")
+  etag         = filemd5("../site/assets/fonts/fontawesome-webfont.svg")
 }
 
 resource "aws_s3_bucket_object" "file_6" {
@@ -54,7 +54,7 @@ resource "aws_s3_bucket_object" "file_6" {
   key          = "/assets/fonts/fontawesome-webfont.ttf"
   source       = "../site/assets/fonts/fontawesome-webfont.ttf"
   content_type = lookup(var.mime_types, "ttf")
-  etag         = filebase64sha256("../site/assets/fonts/fontawesome-webfont.ttf")
+  etag         = filemd5("../site/assets/fonts/fontawesome-webfont.ttf")
 }
 
 resource "aws_s3_bucket_object" "file_7" {
@@ -62,7 +62,7 @@ resource "aws_s3_bucket_object" "file_7" {
   key          = "/assets/fonts/fontawesome-webfont.woff"
   source       = "../site/assets/fonts/fontawesome-webfont.woff"
   content_type = lookup(var.mime_types, "woff")
-  etag         = filebase64sha256("../site/assets/fonts/fontawesome-webfont.woff")
+  etag         = filemd5("../site/assets/fonts/fontawesome-webfont.woff")
 }
 
 resource "aws_s3_bucket_object" "file_8" {
@@ -70,7 +70,7 @@ resource "aws_s3_bucket_object" "file_8" {
   key          = "/assets/fonts/fontawesome-webfont.woff2"
   source       = "../site/assets/fonts/fontawesome-webfont.woff2"
   content_type = lookup(var.mime_types, "woff2")
-  etag         = filebase64sha256("../site/assets/fonts/fontawesome-webfont.woff2")
+  etag         = filemd5("../site/assets/fonts/fontawesome-webfont.woff2")
 }
 
 resource "aws_s3_bucket_object" "file_9" {
@@ -78,7 +78,7 @@ resource "aws_s3_bucket_object" "file_9" {
   key          = "/assets/img/img_bg_header.jpg"
   source       = "../site/assets/img/img_bg_header.jpg"
   content_type = lookup(var.mime_types, "jpg")
-  etag         = filebase64sha256("../site/assets/img/img_bg_header.jpg")
+  etag         = filemd5("../site/assets/img/img_bg_header.jpg")
 }
 
 resource "aws_s3_bucket_object" "file_10" {
@@ -86,7 +86,7 @@ resource "aws_s3_bucket_object" "file_10" {
   key          = "/assets/img/img_bg_main.jpg"
   source       = "../site/assets/img/img_bg_main.jpg"
   content_type = lookup(var.mime_types, "jpg")
-  etag         = filebase64sha256("../site/assets/img/img_bg_main.jpg")
+  etag         = filemd5("../site/assets/img/img_bg_main.jpg")
 }
 
 resource "aws_s3_bucket_object" "file_11" {
@@ -94,7 +94,7 @@ resource "aws_s3_bucket_object" "file_11" {
   key          = "/assets/img/img_blog_1.png"
   source       = "../site/assets/img/img_blog_1.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_blog_1.png")
+  etag         = filemd5("../site/assets/img/img_blog_1.png")
 }
 
 resource "aws_s3_bucket_object" "file_12" {
@@ -102,7 +102,7 @@ resource "aws_s3_bucket_object" "file_12" {
   key          = "/assets/img/img_blog_2.png"
   source       = "../site/assets/img/img_blog_2.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_blog_2.png")
+  etag         = filemd5("../site/assets/img/img_blog_2.png")
 }
 
 resource "aws_s3_bucket_object" "file_13" {
@@ -110,7 +110,7 @@ resource "aws_s3_bucket_object" "file_13" {
   key          = "/assets/img/img_blog_3.png"
   source       = "../site/assets/img/img_blog_3.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_blog_3.png")
+  etag         = filemd5("../site/assets/img/img_blog_3.png")
 }
 
 resource "aws_s3_bucket_object" "file_14" {
@@ -118,7 +118,7 @@ resource "aws_s3_bucket_object" "file_14" {
   key          = "/assets/img/img_btn_icon.png"
   source       = "../site/assets/img/img_btn_icon.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_btn_icon.png")
+  etag         = filemd5("../site/assets/img/img_btn_icon.png")
 }
 
 resource "aws_s3_bucket_object" "file_15" {
@@ -126,7 +126,7 @@ resource "aws_s3_bucket_object" "file_15" {
   key          = "/assets/img/img_project_1.png"
   source       = "../site/assets/img/img_project_1.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_1.png")
+  etag         = filemd5("../site/assets/img/img_project_1.png")
 }
 
 resource "aws_s3_bucket_object" "file_16" {
@@ -134,7 +134,7 @@ resource "aws_s3_bucket_object" "file_16" {
   key          = "/assets/img/img_project_1_mono.png"
   source       = "../site/assets/img/img_project_1_mono.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_1_mono.png")
+  etag         = filemd5("../site/assets/img/img_project_1_mono.png")
 }
 
 resource "aws_s3_bucket_object" "file_17" {
@@ -142,7 +142,7 @@ resource "aws_s3_bucket_object" "file_17" {
   key          = "/assets/img/img_project_2.png"
   source       = "../site/assets/img/img_project_2.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_2.png")
+  etag         = filemd5("../site/assets/img/img_project_2.png")
 }
 
 resource "aws_s3_bucket_object" "file_18" {
@@ -150,7 +150,7 @@ resource "aws_s3_bucket_object" "file_18" {
   key          = "/assets/img/img_project_2_mono.png"
   source       = "../site/assets/img/img_project_2_mono.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_2_mono.png")
+  etag         = filemd5("../site/assets/img/img_project_2_mono.png")
 }
 
 resource "aws_s3_bucket_object" "file_19" {
@@ -158,7 +158,7 @@ resource "aws_s3_bucket_object" "file_19" {
   key          = "/assets/img/img_project_3.png"
   source       = "../site/assets/img/img_project_3.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_3.png")
+  etag         = filemd5("../site/assets/img/img_project_3.png")
 }
 
 resource "aws_s3_bucket_object" "file_20" {
@@ -166,7 +166,7 @@ resource "aws_s3_bucket_object" "file_20" {
   key          = "/assets/img/img_project_3_mono.png"
   source       = "../site/assets/img/img_project_3_mono.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/img_project_3_mono.png")
+  etag         = filemd5("../site/assets/img/img_project_3_mono.png")
 }
 
 resource "aws_s3_bucket_object" "file_21" {
@@ -174,7 +174,7 @@ resource "aws_s3_bucket_object" "file_21" {
   key          = "/assets/img/photo.png"
   source       = "../site/assets/img/photo.png"
   content_type = lookup(var.mime_types, "png")
-  etag         = filebase64sha256("../site/assets/img/photo.png")
+  etag         = filemd5("../site/assets/img/photo.png")
 }
 
 resource "aws_s3_bucket_object" "file_22" {
@@ -182,7 +182,7 @@ resource "aws_s3_bucket_object" "file_22" {
   key          = "/assets/js/bootstrap.min.js"
   source       = "../site/assets/js/bootstrap.min.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/bootstrap.min.js")
+  etag         = filemd5("../site/assets/js/bootstrap.min.js")
 }
 
 resource "aws_s3_bucket_object" "file_23" {
@@ -190,7 +190,7 @@ resource "aws_s3_bucket_object" "file_23" {
   key          = "/assets/js/contacts.js"
   source       = "../site/assets/js/contacts.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/contacts.js")
+  etag         = filemd5("../site/assets/js/contacts.js")
 }
 
 resource "aws_s3_bucket_object" "file_24" {
@@ -198,7 +198,7 @@ resource "aws_s3_bucket_object" "file_24" {
   key          = "/assets/js/jquery-2.2.4.min.js"
   source       = "../site/assets/js/jquery-2.2.4.min.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/jquery-2.2.4.min.js")
+  etag         = filemd5("../site/assets/js/jquery-2.2.4.min.js")
 }
 
 resource "aws_s3_bucket_object" "file_25" {
@@ -206,7 +206,7 @@ resource "aws_s3_bucket_object" "file_25" {
   key          = "/assets/js/jquery.waypoints.js"
   source       = "../site/assets/js/jquery.waypoints.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/jquery.waypoints.js")
+  etag         = filemd5("../site/assets/js/jquery.waypoints.js")
 }
 
 resource "aws_s3_bucket_object" "file_26" {
@@ -214,7 +214,7 @@ resource "aws_s3_bucket_object" "file_26" {
   key          = "/assets/js/mbclicker.min.js"
   source       = "../site/assets/js/mbclicker.min.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/mbclicker.min.js")
+  etag         = filemd5("../site/assets/js/mbclicker.min.js")
 }
 
 resource "aws_s3_bucket_object" "file_27" {
@@ -222,7 +222,7 @@ resource "aws_s3_bucket_object" "file_27" {
   key          = "/assets/js/menu.js"
   source       = "../site/assets/js/menu.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/menu.js")
+  etag         = filemd5("../site/assets/js/menu.js")
 }
 
 resource "aws_s3_bucket_object" "file_28" {
@@ -230,7 +230,7 @@ resource "aws_s3_bucket_object" "file_28" {
   key          = "/assets/js/mobile-menu.js"
   source       = "../site/assets/js/mobile-menu.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/mobile-menu.js")
+  etag         = filemd5("../site/assets/js/mobile-menu.js")
 }
 
 resource "aws_s3_bucket_object" "file_29" {
@@ -238,7 +238,7 @@ resource "aws_s3_bucket_object" "file_29" {
   key          = "/assets/js/popper.min.js"
   source       = "../site/assets/js/popper.min.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/popper.min.js")
+  etag         = filemd5("../site/assets/js/popper.min.js")
 }
 
 resource "aws_s3_bucket_object" "file_30" {
@@ -246,7 +246,7 @@ resource "aws_s3_bucket_object" "file_30" {
   key          = "/assets/js/portfolio-filter.js"
   source       = "../site/assets/js/portfolio-filter.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/portfolio-filter.js")
+  etag         = filemd5("../site/assets/js/portfolio-filter.js")
 }
 
 resource "aws_s3_bucket_object" "file_31" {
@@ -254,7 +254,7 @@ resource "aws_s3_bucket_object" "file_31" {
   key          = "/assets/js/progress-list.js"
   source       = "../site/assets/js/progress-list.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/progress-list.js")
+  etag         = filemd5("../site/assets/js/progress-list.js")
 }
 
 resource "aws_s3_bucket_object" "file_32" {
@@ -262,7 +262,7 @@ resource "aws_s3_bucket_object" "file_32" {
   key          = "/assets/js/section.js"
   source       = "../site/assets/js/section.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/section.js")
+  etag         = filemd5("../site/assets/js/section.js")
 }
 
 resource "aws_s3_bucket_object" "file_33" {
@@ -270,7 +270,7 @@ resource "aws_s3_bucket_object" "file_33" {
   key          = "/assets/js/site-btn.js"
   source       = "../site/assets/js/site-btn.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/site-btn.js")
+  etag         = filemd5("../site/assets/js/site-btn.js")
 }
 
 resource "aws_s3_bucket_object" "file_34" {
@@ -278,7 +278,7 @@ resource "aws_s3_bucket_object" "file_34" {
   key          = "/assets/js/slider-carousel.js"
   source       = "../site/assets/js/slider-carousel.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/slider-carousel.js")
+  etag         = filemd5("../site/assets/js/slider-carousel.js")
 }
 
 resource "aws_s3_bucket_object" "file_35" {
@@ -286,7 +286,7 @@ resource "aws_s3_bucket_object" "file_35" {
   key          = "/assets/js/style-switcher.js"
   source       = "../site/assets/js/style-switcher.js"
   content_type = lookup(var.mime_types, "js")
-  etag         = filebase64sha256("../site/assets/js/style-switcher.js")
+  etag         = filemd5("../site/assets/js/style-switcher.js")
 }
 
 resource "aws_s3_bucket_object" "file_36" {
@@ -294,7 +294,7 @@ resource "aws_s3_bucket_object" "file_36" {
   key          = "/blog.html"
   source       = "../site/blog.html"
   content_type = lookup(var.mime_types, "html")
-  etag         = filebase64sha256("../site/blog.html")
+  etag         = filemd5("../site/blog.html")
 }
 
 resource "aws_s3_bucket_object" "file_37" {
@@ -302,5 +302,5 @@ resource "aws_s3_bucket_object" "file_37" {
   key          = "/index.html"
   source       = "../site/index.html"
   content_type = lookup(var.mime_types, "html")
-  etag         = filebase64sha256("../site/index.html")
+  etag         = filemd5("../site/index.html")
 }

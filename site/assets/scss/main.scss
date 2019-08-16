@@ -38,54 +38,54 @@
  */
 
 // Variables
-@import "settings/variables.scss";
+@import "settings/variables";
 
 // Vendor
-@import "vendor/vendors-extensions.scss";
-@import "vendor/bootstrap/bootstrap.scss";
-@import "vendor/font-awesome/font-awesome.scss";
+@import "vendor/vendors-extensions";
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/font-awesome/font-awesome";
 
 // Main
-@import "settings/fonts.scss";
+@import "settings/fonts";
 
-@import "tools/mixins.scss";
+@import "tools/mixins";
 
-@import "generic/normalize.scss";
-@import "generic/box-sizing.scss";
+@import "generic/normalize";
+@import "generic/box-sizing";
 
-@import "base/scaffolding.scss";
-@import "base/type.scss";
+@import "base/scaffolding";
+@import "base/type";
 
-@import "objects/media.scss";
-@import "objects/animations.scss";
+@import "objects/media";
+@import "objects/animations";
 
 // Components
-@import "components/personal-profile.scss";
-@import "components/main-header.scss";
-@import "components/contact-list.scss";
-@import "components/section.scss";
-@import "components/site-btn.scss";
-@import "components/menu.scss";
-@import "components/project-card.scss";
-@import "components/resume-list.scss";
-@import "components/post-cards.scss";
+@import "components/personal-profile";
+@import "components/main-header";
+@import "components/contact-list";
+@import "components/section";
+@import "components/site-btn";
+@import "components/menu";
+@import "components/project-card";
+@import "components/resume-list";
+@import "components/post-cards";
 @import "components/background";
-@import "components/contacts.scss";
-@import "components/footer.scss";
-@import "components/progress-list.scss";
-@import "components/portfolio-modal.scss";
-@import "components/tags.scss";
-@import "components/blog-header.scss";
-@import "components/article.scss";
-@import "components/posts.scss";
-@import "components/portfolio-menu.scss";
-@import "components/slider-carousel.scss";
-@import "components/mobile-menu.scss";
-@import "components/style-switcher.scss";
+@import "components/contacts";
+@import "components/footer";
+@import "components/progress-list";
+@import "components/portfolio-modal";
+@import "components/tags";
+@import "components/blog-header";
+@import "components/article";
+@import "components/posts";
+@import "components/portfolio-menu";
+@import "components/slider-carousel";
+@import "components/mobile-menu";
+@import "components/style-switcher";
 
 // Obj
-@import "objects/layout.scss";
+@import "objects/layout";
 
 // Utils
-@import "utilities/helpers.scss";
-@import "utilities/states.scss";
+@import "utilities/helpers";
+@import "utilities/states";

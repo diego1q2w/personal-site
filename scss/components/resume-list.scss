@@ -55,4 +55,13 @@
     color: $color-text-additional;
     padding-bottom: 10px;
   }
+
+  .resume-list__block-description{
+    font-family: $font-family-additional;
+    font-size: $font-size-t3;
+    line-height: $line-height-t5;
+    color: $color-text-main;
+    text-indent: -20px;
+    padding-bottom: 15px;
+  }
 }

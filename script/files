@@ -23,7 +23,7 @@ resource "aws_s3_bucket_object" "file_$COUNT" {
   key          = "${path#$SRC}"
   source       = "$BASE_PATH${path#$SRC}"
   content_type = lookup(var.mime_types, "${path##*.}")
-  etag         = filebase64sha256("$BASE_PATH${path#$SRC}")
+  etag         = filemd5("$BASE_PATH${path#$SRC}")
 }
 EOM
 

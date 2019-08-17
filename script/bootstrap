@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+# Install the npm packages
+npm i
+
+# Install Glup CLI
+npm install --global gulp-cli
+
+# Start terraform
+cd terraform
+terraform init

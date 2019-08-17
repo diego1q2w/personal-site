@@ -2,6 +2,7 @@ terraform {
   required_version = "~> 0.12.0"
 
   backend "s3" {
+    # TODO: Update this bucket name
     bucket               = "terraform-personal-site"
     key                  = "tfstate-common"
     region               = "eu-west-1"

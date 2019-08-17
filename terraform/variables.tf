@@ -1,4 +1,5 @@
 variable "bucket" {
+  #TODO: Update this bucket name
   default = "diego-nava-site"
 }
 

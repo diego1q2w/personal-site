@@ -15,6 +15,7 @@ variable "mime_types" {
     js    = "application/javascript"
     map   = "application/javascript"
     json  = "application/json"
+    pdf   = "application/pdf"
     eot   = "application/vnd.ms-fontobject"
     woff2 = "font/woff2"
     woff  = "font/woff"

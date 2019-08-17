@@ -291,6 +291,14 @@ resource "aws_s3_bucket_object" "file_35" {
 
 resource "aws_s3_bucket_object" "file_36" {
   bucket       = aws_s3_bucket.static_site.bucket
+  key          = "/documents/resume.pdf"
+  source       = "../site/documents/resume.pdf"
+  content_type = lookup(var.mime_types, "pdf")
+  etag         = filemd5("../site/documents/resume.pdf")
+}
+
+resource "aws_s3_bucket_object" "file_37" {
+  bucket       = aws_s3_bucket.static_site.bucket
   key          = "/index.html"
   source       = "../site/index.html"
   content_type = lookup(var.mime_types, "html")

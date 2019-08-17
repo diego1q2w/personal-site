@@ -1,6 +1,6 @@
 # Personal site
 
-This project was envisioned to be fully serverless outcasting the hassle of building and maintaining a traditional server, and by that, I mean forgetting about, Apache, Docker, Nginx, Load Balancers, SSH, etc. Furthermore, with an incredibly cheap cost, Imagine having a scalable and highly available site with less than a $1, well, believe it or not, this is what this site costs.
+This project was envisioned to be fully serverless outcasting the hassle of building and maintaining a traditional server, and by that, I mean forgetting about, Apache, Docker, Nginx, Load Balancers, SSH, etc. Furthermore, with an incredibly cheap cost. Imagine having a scalable and highly available site with less than a $1, well, believe it or not, this is what this site costs.
 
 This project uses Terraform as cloud orchestrator, which means you can have all your cloud resources as a code, then you don't have to memorize or document all the steps you took to have your site deployed is self-documented, and applying changes is just a matter of running one command, easy peasy.
 

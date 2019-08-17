@@ -91,26 +91,26 @@ resource "aws_s3_bucket_object" "file_10" {
 
 resource "aws_s3_bucket_object" "file_11" {
   bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/assets/img/img_blog_1.png"
-  source       = "../site/assets/img/img_blog_1.png"
-  content_type = lookup(var.mime_types, "png")
-  etag         = filemd5("../site/assets/img/img_blog_1.png")
+  key          = "/assets/img/img_blog_11.jpeg"
+  source       = "../site/assets/img/img_blog_11.jpeg"
+  content_type = lookup(var.mime_types, "jpeg")
+  etag         = filemd5("../site/assets/img/img_blog_11.jpeg")
 }
 
 resource "aws_s3_bucket_object" "file_12" {
   bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/assets/img/img_blog_2.png"
-  source       = "../site/assets/img/img_blog_2.png"
-  content_type = lookup(var.mime_types, "png")
-  etag         = filemd5("../site/assets/img/img_blog_2.png")
+  key          = "/assets/img/img_blog_12.jpeg"
+  source       = "../site/assets/img/img_blog_12.jpeg"
+  content_type = lookup(var.mime_types, "jpeg")
+  etag         = filemd5("../site/assets/img/img_blog_12.jpeg")
 }
 
 resource "aws_s3_bucket_object" "file_13" {
   bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/assets/img/img_blog_3.png"
-  source       = "../site/assets/img/img_blog_3.png"
-  content_type = lookup(var.mime_types, "png")
-  etag         = filemd5("../site/assets/img/img_blog_3.png")
+  key          = "/assets/img/img_blog_13.jpeg"
+  source       = "../site/assets/img/img_blog_13.jpeg"
+  content_type = lookup(var.mime_types, "jpeg")
+  etag         = filemd5("../site/assets/img/img_blog_13.jpeg")
 }
 
 resource "aws_s3_bucket_object" "file_14" {
@@ -290,14 +290,6 @@ resource "aws_s3_bucket_object" "file_35" {
 }
 
 resource "aws_s3_bucket_object" "file_36" {
-  bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/blog.html"
-  source       = "../site/blog.html"
-  content_type = lookup(var.mime_types, "html")
-  etag         = filemd5("../site/blog.html")
-}
-
-resource "aws_s3_bucket_object" "file_37" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/index.html"
   source       = "../site/index.html"

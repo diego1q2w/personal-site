@@ -13,7 +13,8 @@ resource "aws_lambda_function" "ses_lambda" {
 
   environment {
     variables = {
-      sender = var.email_sender
+      SENDER   = var.email_sender
+      RECEIVER = var.email_reciver
     }
   }
 
@@ -22,6 +23,59 @@ resource "aws_lambda_function" "ses_lambda" {
 resource "aws_iam_role" "lambda_exec_role" {
   name               = "lambda_exec_role"
   assume_role_policy = file("./policies/lambda_assume_role.json")
+}
+
+resource "aws_iam_policy" "lambda_logging" {
+  name        = "lambda_logging"
+  path        = "/"
+  description = "IAM policy for logging from a lambda"
+
+  policy = file("./policies/lambda_logging.json")
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_logs" {
+  role       = aws_iam_role.lambda_exec_role.name
+  policy_arn = aws_iam_policy.lambda_logging.arn
+}
+
+resource "aws_iam_policy" "send_email_reciver" {
+  name        = "email_send_reciver"
+  path        = "/"
+  description = "IAM policy for sending emails"
+
+  policy = data.template_file.send_email_reciver.rendered
+}
+
+data "template_file" "send_email_reciver" {
+  template = file("./policies/send_email.json")
+  vars = {
+    email_arn = aws_ses_email_identity.email_reciver.arn
+  }
+}
+
+resource "aws_iam_role_policy_attachment" "send_email_reciver" {
+  role       = aws_iam_role.lambda_exec_role.name
+  policy_arn = aws_iam_policy.send_email_reciver.arn
+}
+
+resource "aws_iam_policy" "send_email_sender" {
+  name        = "send_email_sender"
+  path        = "/"
+  description = "IAM policy for sending emails"
+
+  policy = data.template_file.send_email_sender.rendered
+}
+
+data "template_file" "send_email_sender" {
+  template = file("./policies/send_email.json")
+  vars = {
+    email_arn = aws_ses_email_identity.email_sender.arn
+  }
+}
+
+resource "aws_iam_role_policy_attachment" "send_email_sender" {
+  role       = aws_iam_role.lambda_exec_role.name
+  policy_arn = aws_iam_policy.send_email_sender.arn
 }
 
 resource "aws_lambda_permission" "apigw" {

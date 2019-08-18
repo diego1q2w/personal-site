@@ -8,7 +8,7 @@ exports.handler = (event, context, callback) => {
     sendEmail(event, function (err, data) {
         const response = {
             "isBase64Encoded": false,
-            "headers": { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+            "headers": { 'Content-Type': 'application/json', "Access-Control-Allow-Origin" : "*"},
             "statusCode": 200,
             "body": "{\"result\": \"Success.\"}"
         };

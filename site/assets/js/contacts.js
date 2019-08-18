@@ -20,6 +20,7 @@ function validateForm(selector) {
 validateForm('.js-form .form-field');
 
 var form = document.querySelector('.js-form');
+var formButton = document.querySelector('#form-button');
 var formName = '.js-form';
 
 form.addEventListener('submit', function(e){
@@ -40,15 +41,16 @@ function submitForm(e, formName) {
 
     $.ajax({
         type: "POST",
-        url: 'https://g8ec4p3hi1.execute-api.us-east-1.amazonaws.com/prod/email',
+        url: 'https://mail.dnava.co/prod/send',
         data: JSON.stringify(formData),
+        contentType: "application/json",
         success: function () {
             console.log('success');
-            //...
+            form.reset();
+            formButton.disabled = true;
         },
-        error: function () {
-            console.log('error');
-            //...
+        error: function (e) {
+            alert("There was an error sending your requests")
         }
     });
 }

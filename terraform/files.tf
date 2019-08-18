@@ -3,29 +3,13 @@
 
 resource "aws_s3_bucket_object" "file_0" {
   bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/assets/css/color.css"
-  source       = "../site/assets/css/color.css"
-  content_type = lookup(var.mime_types, "css")
-  etag         = filemd5("../site/assets/css/color.css")
-}
-
-resource "aws_s3_bucket_object" "file_1" {
-  bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/css/main.css"
   source       = "../site/assets/css/main.css"
   content_type = lookup(var.mime_types, "css")
   etag         = filemd5("../site/assets/css/main.css")
 }
 
-resource "aws_s3_bucket_object" "file_2" {
-  bucket       = aws_s3_bucket.static_site.bucket
-  key          = "/assets/css/monochrome.css"
-  source       = "../site/assets/css/monochrome.css"
-  content_type = lookup(var.mime_types, "css")
-  etag         = filemd5("../site/assets/css/monochrome.css")
-}
-
-resource "aws_s3_bucket_object" "file_3" {
+resource "aws_s3_bucket_object" "file_1" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/FontAwesome.otf"
   source       = "../site/assets/fonts/FontAwesome.otf"
@@ -33,7 +17,7 @@ resource "aws_s3_bucket_object" "file_3" {
   etag         = filemd5("../site/assets/fonts/FontAwesome.otf")
 }
 
-resource "aws_s3_bucket_object" "file_4" {
+resource "aws_s3_bucket_object" "file_2" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/fontawesome-webfont.eot"
   source       = "../site/assets/fonts/fontawesome-webfont.eot"
@@ -41,7 +25,7 @@ resource "aws_s3_bucket_object" "file_4" {
   etag         = filemd5("../site/assets/fonts/fontawesome-webfont.eot")
 }
 
-resource "aws_s3_bucket_object" "file_5" {
+resource "aws_s3_bucket_object" "file_3" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/fontawesome-webfont.svg"
   source       = "../site/assets/fonts/fontawesome-webfont.svg"
@@ -49,7 +33,7 @@ resource "aws_s3_bucket_object" "file_5" {
   etag         = filemd5("../site/assets/fonts/fontawesome-webfont.svg")
 }
 
-resource "aws_s3_bucket_object" "file_6" {
+resource "aws_s3_bucket_object" "file_4" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/fontawesome-webfont.ttf"
   source       = "../site/assets/fonts/fontawesome-webfont.ttf"
@@ -57,7 +41,7 @@ resource "aws_s3_bucket_object" "file_6" {
   etag         = filemd5("../site/assets/fonts/fontawesome-webfont.ttf")
 }
 
-resource "aws_s3_bucket_object" "file_7" {
+resource "aws_s3_bucket_object" "file_5" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/fontawesome-webfont.woff"
   source       = "../site/assets/fonts/fontawesome-webfont.woff"
@@ -65,7 +49,7 @@ resource "aws_s3_bucket_object" "file_7" {
   etag         = filemd5("../site/assets/fonts/fontawesome-webfont.woff")
 }
 
-resource "aws_s3_bucket_object" "file_8" {
+resource "aws_s3_bucket_object" "file_6" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/fonts/fontawesome-webfont.woff2"
   source       = "../site/assets/fonts/fontawesome-webfont.woff2"
@@ -73,7 +57,7 @@ resource "aws_s3_bucket_object" "file_8" {
   etag         = filemd5("../site/assets/fonts/fontawesome-webfont.woff2")
 }
 
-resource "aws_s3_bucket_object" "file_9" {
+resource "aws_s3_bucket_object" "file_7" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_bg_header.jpg"
   source       = "../site/assets/img/img_bg_header.jpg"
@@ -81,7 +65,7 @@ resource "aws_s3_bucket_object" "file_9" {
   etag         = filemd5("../site/assets/img/img_bg_header.jpg")
 }
 
-resource "aws_s3_bucket_object" "file_10" {
+resource "aws_s3_bucket_object" "file_8" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_bg_main.jpg"
   source       = "../site/assets/img/img_bg_main.jpg"
@@ -89,7 +73,7 @@ resource "aws_s3_bucket_object" "file_10" {
   etag         = filemd5("../site/assets/img/img_bg_main.jpg")
 }
 
-resource "aws_s3_bucket_object" "file_11" {
+resource "aws_s3_bucket_object" "file_9" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_blog_11.jpeg"
   source       = "../site/assets/img/img_blog_11.jpeg"
@@ -97,7 +81,7 @@ resource "aws_s3_bucket_object" "file_11" {
   etag         = filemd5("../site/assets/img/img_blog_11.jpeg")
 }
 
-resource "aws_s3_bucket_object" "file_12" {
+resource "aws_s3_bucket_object" "file_10" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_blog_12.jpeg"
   source       = "../site/assets/img/img_blog_12.jpeg"
@@ -105,7 +89,7 @@ resource "aws_s3_bucket_object" "file_12" {
   etag         = filemd5("../site/assets/img/img_blog_12.jpeg")
 }
 
-resource "aws_s3_bucket_object" "file_13" {
+resource "aws_s3_bucket_object" "file_11" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_blog_13.jpeg"
   source       = "../site/assets/img/img_blog_13.jpeg"
@@ -113,7 +97,7 @@ resource "aws_s3_bucket_object" "file_13" {
   etag         = filemd5("../site/assets/img/img_blog_13.jpeg")
 }
 
-resource "aws_s3_bucket_object" "file_14" {
+resource "aws_s3_bucket_object" "file_12" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_btn_icon.png"
   source       = "../site/assets/img/img_btn_icon.png"
@@ -121,7 +105,7 @@ resource "aws_s3_bucket_object" "file_14" {
   etag         = filemd5("../site/assets/img/img_btn_icon.png")
 }
 
-resource "aws_s3_bucket_object" "file_15" {
+resource "aws_s3_bucket_object" "file_13" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_1.png"
   source       = "../site/assets/img/img_project_1.png"
@@ -129,7 +113,7 @@ resource "aws_s3_bucket_object" "file_15" {
   etag         = filemd5("../site/assets/img/img_project_1.png")
 }
 
-resource "aws_s3_bucket_object" "file_16" {
+resource "aws_s3_bucket_object" "file_14" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_1_mono.png"
   source       = "../site/assets/img/img_project_1_mono.png"
@@ -137,7 +121,7 @@ resource "aws_s3_bucket_object" "file_16" {
   etag         = filemd5("../site/assets/img/img_project_1_mono.png")
 }
 
-resource "aws_s3_bucket_object" "file_17" {
+resource "aws_s3_bucket_object" "file_15" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_2.png"
   source       = "../site/assets/img/img_project_2.png"
@@ -145,7 +129,7 @@ resource "aws_s3_bucket_object" "file_17" {
   etag         = filemd5("../site/assets/img/img_project_2.png")
 }
 
-resource "aws_s3_bucket_object" "file_18" {
+resource "aws_s3_bucket_object" "file_16" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_2_mono.png"
   source       = "../site/assets/img/img_project_2_mono.png"
@@ -153,7 +137,7 @@ resource "aws_s3_bucket_object" "file_18" {
   etag         = filemd5("../site/assets/img/img_project_2_mono.png")
 }
 
-resource "aws_s3_bucket_object" "file_19" {
+resource "aws_s3_bucket_object" "file_17" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_3.png"
   source       = "../site/assets/img/img_project_3.png"
@@ -161,7 +145,7 @@ resource "aws_s3_bucket_object" "file_19" {
   etag         = filemd5("../site/assets/img/img_project_3.png")
 }
 
-resource "aws_s3_bucket_object" "file_20" {
+resource "aws_s3_bucket_object" "file_18" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/img_project_3_mono.png"
   source       = "../site/assets/img/img_project_3_mono.png"
@@ -169,7 +153,7 @@ resource "aws_s3_bucket_object" "file_20" {
   etag         = filemd5("../site/assets/img/img_project_3_mono.png")
 }
 
-resource "aws_s3_bucket_object" "file_21" {
+resource "aws_s3_bucket_object" "file_19" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/img/photo.png"
   source       = "../site/assets/img/photo.png"
@@ -177,7 +161,7 @@ resource "aws_s3_bucket_object" "file_21" {
   etag         = filemd5("../site/assets/img/photo.png")
 }
 
-resource "aws_s3_bucket_object" "file_22" {
+resource "aws_s3_bucket_object" "file_20" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/bootstrap.min.js"
   source       = "../site/assets/js/bootstrap.min.js"
@@ -185,7 +169,7 @@ resource "aws_s3_bucket_object" "file_22" {
   etag         = filemd5("../site/assets/js/bootstrap.min.js")
 }
 
-resource "aws_s3_bucket_object" "file_23" {
+resource "aws_s3_bucket_object" "file_21" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/contacts.js"
   source       = "../site/assets/js/contacts.js"
@@ -193,7 +177,7 @@ resource "aws_s3_bucket_object" "file_23" {
   etag         = filemd5("../site/assets/js/contacts.js")
 }
 
-resource "aws_s3_bucket_object" "file_24" {
+resource "aws_s3_bucket_object" "file_22" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/jquery-2.2.4.min.js"
   source       = "../site/assets/js/jquery-2.2.4.min.js"
@@ -201,7 +185,7 @@ resource "aws_s3_bucket_object" "file_24" {
   etag         = filemd5("../site/assets/js/jquery-2.2.4.min.js")
 }
 
-resource "aws_s3_bucket_object" "file_25" {
+resource "aws_s3_bucket_object" "file_23" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/jquery.waypoints.js"
   source       = "../site/assets/js/jquery.waypoints.js"
@@ -209,7 +193,7 @@ resource "aws_s3_bucket_object" "file_25" {
   etag         = filemd5("../site/assets/js/jquery.waypoints.js")
 }
 
-resource "aws_s3_bucket_object" "file_26" {
+resource "aws_s3_bucket_object" "file_24" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/mbclicker.min.js"
   source       = "../site/assets/js/mbclicker.min.js"
@@ -217,7 +201,7 @@ resource "aws_s3_bucket_object" "file_26" {
   etag         = filemd5("../site/assets/js/mbclicker.min.js")
 }
 
-resource "aws_s3_bucket_object" "file_27" {
+resource "aws_s3_bucket_object" "file_25" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/menu.js"
   source       = "../site/assets/js/menu.js"
@@ -225,7 +209,7 @@ resource "aws_s3_bucket_object" "file_27" {
   etag         = filemd5("../site/assets/js/menu.js")
 }
 
-resource "aws_s3_bucket_object" "file_28" {
+resource "aws_s3_bucket_object" "file_26" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/mobile-menu.js"
   source       = "../site/assets/js/mobile-menu.js"
@@ -233,7 +217,7 @@ resource "aws_s3_bucket_object" "file_28" {
   etag         = filemd5("../site/assets/js/mobile-menu.js")
 }
 
-resource "aws_s3_bucket_object" "file_29" {
+resource "aws_s3_bucket_object" "file_27" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/popper.min.js"
   source       = "../site/assets/js/popper.min.js"
@@ -241,7 +225,7 @@ resource "aws_s3_bucket_object" "file_29" {
   etag         = filemd5("../site/assets/js/popper.min.js")
 }
 
-resource "aws_s3_bucket_object" "file_30" {
+resource "aws_s3_bucket_object" "file_28" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/portfolio-filter.js"
   source       = "../site/assets/js/portfolio-filter.js"
@@ -249,7 +233,7 @@ resource "aws_s3_bucket_object" "file_30" {
   etag         = filemd5("../site/assets/js/portfolio-filter.js")
 }
 
-resource "aws_s3_bucket_object" "file_31" {
+resource "aws_s3_bucket_object" "file_29" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/progress-list.js"
   source       = "../site/assets/js/progress-list.js"
@@ -257,7 +241,7 @@ resource "aws_s3_bucket_object" "file_31" {
   etag         = filemd5("../site/assets/js/progress-list.js")
 }
 
-resource "aws_s3_bucket_object" "file_32" {
+resource "aws_s3_bucket_object" "file_30" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/section.js"
   source       = "../site/assets/js/section.js"
@@ -265,7 +249,7 @@ resource "aws_s3_bucket_object" "file_32" {
   etag         = filemd5("../site/assets/js/section.js")
 }
 
-resource "aws_s3_bucket_object" "file_33" {
+resource "aws_s3_bucket_object" "file_31" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/site-btn.js"
   source       = "../site/assets/js/site-btn.js"
@@ -273,7 +257,7 @@ resource "aws_s3_bucket_object" "file_33" {
   etag         = filemd5("../site/assets/js/site-btn.js")
 }
 
-resource "aws_s3_bucket_object" "file_34" {
+resource "aws_s3_bucket_object" "file_32" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/slider-carousel.js"
   source       = "../site/assets/js/slider-carousel.js"
@@ -281,7 +265,7 @@ resource "aws_s3_bucket_object" "file_34" {
   etag         = filemd5("../site/assets/js/slider-carousel.js")
 }
 
-resource "aws_s3_bucket_object" "file_35" {
+resource "aws_s3_bucket_object" "file_33" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/assets/js/style-switcher.js"
   source       = "../site/assets/js/style-switcher.js"
@@ -289,7 +273,7 @@ resource "aws_s3_bucket_object" "file_35" {
   etag         = filemd5("../site/assets/js/style-switcher.js")
 }
 
-resource "aws_s3_bucket_object" "file_36" {
+resource "aws_s3_bucket_object" "file_34" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/documents/resume.pdf"
   source       = "../site/documents/resume.pdf"
@@ -297,7 +281,7 @@ resource "aws_s3_bucket_object" "file_36" {
   etag         = filemd5("../site/documents/resume.pdf")
 }
 
-resource "aws_s3_bucket_object" "file_37" {
+resource "aws_s3_bucket_object" "file_35" {
   bucket       = aws_s3_bucket.static_site.bucket
   key          = "/index.html"
   source       = "../site/index.html"

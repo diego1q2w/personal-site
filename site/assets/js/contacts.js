@@ -40,7 +40,7 @@ function submitForm(e, formName) {
 
     $.ajax({
         type: "POST",
-        url: 'https://i466soodf3.execute-api.eu-west-1.amazonaws.com/prod/email',
+        url: 'https://g8ec4p3hi1.execute-api.us-east-1.amazonaws.com/prod/email',
         data: JSON.stringify(formData),
         success: function () {
             console.log('success');

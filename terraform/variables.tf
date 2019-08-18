@@ -7,6 +7,19 @@ variable "region" {
   default = "eu-west-1"
 }
 
+# TODO: this has to be confirmed by AWS SES
+variable email_sender {
+  default = "diego.nava3009@gmail.com"
+}
+
+variable email_reciver {
+  default = "diego.nava3009@gmail.com"
+}
+
+variable files_directory {
+  default = "./files"
+}
+
 variable "mime_types" {
   default = {
     htm   = "text/html"

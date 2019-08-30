@@ -38,18 +38,19 @@ function submitForm(e, formName) {
         email: email,
         message: message
     };
-
+    formButton.disabled = true;
     $.ajax({
         type: "POST",
         url: 'https://mail.dnava.co/prod/send',
         data: JSON.stringify(formData),
         contentType: "application/json",
         success: function () {
-            console.log('success');
+            alert("Thanks for reaching out! I'll get back to you soon :)");
             form.reset();
-            formButton.disabled = true;
+
         },
         error: function (e) {
+            formButton.disabled = false;
             alert("There was an error sending your requests")
         }
     });

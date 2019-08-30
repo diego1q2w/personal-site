@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 
 const ses = new AWS.SES();
-const RECEIVERS = [process.env.RECEIVER];
+const RECEIVERS = [process.env.RECEIVER]; // ensure 'receiver email' is verified in your Amazon SES
 const SENDER = process.env.SENDER; // ensure 'sender email' is verified in your Amazon SES
 exports.handler = (event, context, callback) => {
     //console.log('Received event:', event);
@@ -31,7 +31,7 @@ function sendEmail (event, done) {
                 }
             },
             Subject: {
-                Data: 'Contact Form inquiry: ' + data.name,
+                Data: 'Contact from your site: ' + data.name,
                 Charset: 'UTF-8'
             }
         },

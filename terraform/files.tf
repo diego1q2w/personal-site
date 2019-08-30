@@ -283,6 +283,14 @@ resource "aws_s3_bucket_object" "file_34" {
 
 resource "aws_s3_bucket_object" "file_35" {
   bucket       = aws_s3_bucket.static_site.bucket
+  key          = "/favicon.ico"
+  source       = "../site/favicon.ico"
+  content_type = lookup(var.mime_types, "ico")
+  etag         = filemd5("../site/favicon.ico")
+}
+
+resource "aws_s3_bucket_object" "file_36" {
+  bucket       = aws_s3_bucket.static_site.bucket
   key          = "/index.html"
   source       = "../site/index.html"
   content_type = lookup(var.mime_types, "html")

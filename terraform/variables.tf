@@ -43,5 +43,6 @@ variable "mime_types" {
     jpeg  = "image/jpeg"
     jpg   = "image/jpeg"
     svg   = "image/svg"
+    ico   = "image/x-icon"
   }
 }

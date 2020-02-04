@@ -2,7 +2,7 @@
 set -e
 
 # Install the npm packages
-npm i
+yarn install
 
 # Install Glup CLI
 npm install --global gulp-cli

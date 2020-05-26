@@ -7,12 +7,12 @@ variable "region" {
   default = "us-east-1"
 }
 
-# TODO: this has to be confirmed by AWS SES, you'll get an email with a link you'll have to confirm
+# this has to be confirmed by AWS SES, you'll get an email with a link you'll have to confirm
 variable email_sender {
   default = "diego.nava3009@gmail.com"
 }
 
-# TODO: this has to be confirmed by AWS SES, you'll get an email with a link you'll have to confirm
+# this has to be confirmed by AWS SES, you'll get an email with a link you'll have to confirm
 variable email_reciver {
   default = "diego.nava77@hotmail.com"
 }
